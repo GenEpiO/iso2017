@@ -1,0 +1,150 @@
+datatype	path	id	uiLabel	definition	minValue	maxValue	minLength	maxLength	pattern	help	preferred_unit
+model	/	GENEPIO:0002083	draft sequence repository contextual data standard	This draft specification provides a collection of fields related to the contextual data of a specimen, its genomic sequencing, and its pathogenic epidemiology.							
+model	/	GENEPIO:0002082	Laboratory Contact Information	Contact information for an organization related to specimen collection, processing or storage.							
+xmls:anyURI	/	GENEPIO:0002105	Organization Role	An organization related to the collection, isolate production, sequencing or storage of specimen material or data.							
+xmls:string	/	NCIT:C93874	Organization Name	A textual identifier for an organization. [def-source: NCI]							
+xmls:string	/	NCIT:C40974	First Name	A word or group of words indicating a person's first (personal or given) name; the name that precedes the surname.							
+xmls:string	/	NCIT:C40975	Last Name	A word or group of words indicating a person's last (family) name.							
+xmls:string	/	NCIT:C93582	Job Title	A local name for an individual's occupation.							
+xmls:string	/	NCIT:C42775	Email Address	A text string identifier for a location to which e-mail can be delivered.					email		
+model	/	GENEPIO:0001756	Telephone Number								
+xmls:string	/GENEPIO:0002082	NCIT:C40978	phone	A sequence of decimal digits (0-9) that is used for identifying a destination telephone line or other device in a telephone network.							
+xmls:anyURI	/GENEPIO:0002082	GENEPIO:0001896	phone type								
+xmls:anyURI	/	NCIT:C25464	Country	A collective generic term that refers here to a wide variety of dependencies, areas of special sovereignty, uninhabited islands, and other entities in addition to the traditional countries or independent states.							
+xmls:anyURI	/	ENVO:00000005	Province/State/Territory/Region	A primary administrative division of a country, such as a state in the United States.							
+xmls:anyURI	/	NCIT:C80234	Municipality	A political unit, such as a city, town, or village, incorporated for local self-government.							
+xmls:string	/	NCIT:C25690	Street Address	The street name and building number where a person or organization can be found.							
+model	/	GENEPIO:0002081	Sample Collection								
+xmls:anyURI	/	GENEPIO:0001237	sample type	The type of material from which the specimen was obtained. Specimens are usually categorized as food, body products or tissues, or environmental material.							
+model	/	GENEPIO:0002076	geographic feature	A geographic location where a given specimen was extracted or collected from. Location can be identified at country, city, postal address, or longitude and latitude level of granularity. It can also be described by biome, physiographic and other environmental features.							
+xmls:anyURI	/GENEPIO:0002081	ENVO:00000191	physiographic feature								
+xmls:anyURI	/GENEPIO:0002081	ENVO:00000002	constructed feature	An anthropogenic geographic feature is a geographic feature resulting from the influence of human beings on nature.							
+xmls:anyURI	/GENEPIO:0002081	ENVO:00000428	biome	A biome is an environmental system to which resident ecological communities have evolved adaptations.							
+model	/	GENEPIO:0002086	geographic location	The geographical origin of the sample by city, region, country or latitude and logitude.							
+model	/GENEPIO:0002081	GENEPIO:0001656	latitude and longitude coordinate(s)								
+xmls:decimal	/GENEPIO:0002081/GENEPIO:0002086	GENEPIO:0001863	longitude	A decimal longitude measurement in degrees in conformance with the ISO 6709 standard.	-180.0	180.0					
+xmls:decimal	/GENEPIO:0002081/GENEPIO:0002086	GENEPIO:0001862	latitude	A decimal latitude measurement in degrees in conformance with the ISO 6709 standard.	-90.0	90.0					
+xmls:anyURI	/GENEPIO:0002081	GENEPIO:0000118	country	A specimen location country is the country of the site of a given specimen collection event.							
+xmls:anyURI	/GENEPIO:0002081	GENEPIO:0002097	Province/State/Territory/Region	A specimen extraction location - city or region is the Gazetteer ontology identifier or textual name of the most precise geographical location available for the site of a specimen extraction event.							
+xmls:anyURI	/GENEPIO:0002081	GENEPIO:0001785	city	The specimen extraction location - city is the city where a specimen was taken (extracted) from a subject or environment							
+xmls:dateTime	/	OBI:0001619	Collection Date	A time measurement datum that is the measure of the time when the specimens are collected.							
+xmls:anyURI	/	OBI:0000659	Collection Method	A planned process with the objective of collecting a specimen.							
+xmls:anyURI	/	GENEPIO:0002094	Collection Device	The tool or device used to extract a specimen.							
+xmls:anyURI	/	ENVO:00010483	Environmental Material	A portion of environmental material is a fiat object which forms the medium or part of the medium of an environmental system.							
+xmls:anyURI	/	ENVO:00002297	environmental location	A material entity which determines an environmental system.							
+xmls:anyURI	/	GENEPIO:0001567	host	The species of the host organism from which a specimen (pathogen) organism was obtained. Use the full taxonomic name, eg, "Homo sapiens".							
+xmls:anyURI	/	GENEPIO:0000110	Host Health Status	A description of whether a given subject organism appeared healthy, sick or deceased at the time of specimen extraction. If sick or deceased, additional details should be provided in project-specific fields.							
+xmls:anyURI	/	GENEPIO:0001617	host disease	Name of disease in a subject that is related to a given investigation, study and/or specimen.							
+xmls:anyURI	/	GENEPIO:0000028	body product	substance produced by the body, e.g. stool, mucus, where the specimen was obtained from.							
+xmls:anyURI	/	GENEPIO:0000025	anatomical site	Name of body site where the specimen was obtained from, such as a specific organ or tissue.							
+model	/	GENEPIO:0002084	Isolate								
+xmls:anyURI	/	GENEPIO:0001640	Organism	This is the taxonomic species descriptor of a specimen isolate (an organism found within a specimen.)							
+xmls:string	/	GENEPIO:0001079	Serotype	A serotype or serovar is a distinct variation within a species of bacteria or virus or among immune cells of different individuals. These microorganisms, viruses, or cells are classified together based on their cell surface antigens, allowing the epidemiologic classification of organisms to the sub-species level							
+xmls:string	/	GENEPIO:0001429	strain	A strain identifier is the unique microbial or eukaryotic strain name from a reference database that a sample has been matched to.							
+xmls:string	/	GENEPIO:0001644	Isolate	An isolate identifier is an identifier assigned to a given isolate by a particular agency that is handling or storing it.							
+xmls:string	/	OBI:0000079	culture medium	a processed material that provides the needed nourishment for microorganisms or cells grown in vitro.							
+xmls:string	/	GENEPIO:0002107	Isolation Media	An isolation medium is a culture medium which has the disposition to encourage growth of particular bacteria to the exclusion of others in the same growth environment.							
+model	/	GENEPIO:0002087	Isolate Passage History								
+xmls:nonNegativeInteger	/	GENEPIO:0002078	number of passages	The number of serial iterations that an isolate is grown in one environment.							
+xmls:string	/	GENEPIO:0002079	passage protocol	The number of serial iterations that an isolate is grown in one environment.							
+model	/	GENEPIO:0002106	Food Specimen	This specification offers food source, product type, packaging and processing attributes relevant to describing a food specimen.							
+model	/	GENEPIO:0001533	food specimen type	A food specimen type is a categorization of a food specimen, by the organism it is or came from, or by a class of food products.							
+xmls:anyURI	/GENEPIO:0002106	FOODON:03411564	food source	Individual plant or animal from which the food product or its major ingredient is derived; also a chemical food source [FDA CFSAN 1995].							
+xmls:anyURI	/GENEPIO:0002106	FOODON:00002381	food product by organism								
+xmls:anyURI	/GENEPIO:0002106	FOODON:03311737	processed food product								
+xmls:string	/GENEPIO:0002106	NCIT:C71898	brand name	The part of the name or logo associated with a specific product or service identifying and distinguishing it from varieties of the same product or service marketed by competing companies.							
+xmls:anyURI	/	FOODON:03450002	food cooking process								
+xmls:anyURI	/	FOODON:03440011	extent of food heat treatment	Used to broadly characterize a food product based on the extent of heat applied. Heat treatment affects the flavor and textural characteristics of a food and thus consumer preparation time. Heat treatment causes chemical changes and/or reduction of enzyme and of microbial activity and thus affects food safety and shelflife. Specifics of preparation are covered by *G. COOKING METHOD* and *H. TREATMENT APPLIED*. [FDA CFSAN 1995]							
+xmls:anyURI	/	FOODON:03430113	food physical quality	The physical state of the food product (liquid, semiliquid, semisolid, or solid). Solid food products are further subdivided by shape or form. Terms are provided for products that have both liquid and solid components or that incorporate air or other gases. [FDA CFSAN 1995]							
+xmls:anyURI	/	FOODON:03470107	food preservation process	The methods contributing to the prevention or retardation of microbial, enzymatic or oxidative spoilage and thus to the extension of shelf life. Index all methods for which information is available, even if a corresponding descriptor has already been used in *H. TREATMENT APPLIED*. Preservation descriptors refer to the finished food as a whole with these exceptions: (1) if the components of a multi-component food, such as cream pie, are preservation by different methods, index all methods; (2)  if chemical preservatives are declared on the label, always index them even if it is known that the preservative was introduced through or is only present in a component or ingredient of the food; and (3) if the preservation method for an ingredient is declared on the label (such as brie cheese made from pasteurized milk) index it. Also use *INGREDIENT preservation by THERMAL PROCESSING* or *INGREDIENT preservation by IRRADIATION* when ingredients have been pasteurized, ultrapasteurized, sterilized or irradiated.							
+xmls:anyURI	/	FOODON:03490100	food container or wrapping	Type of container or wrapping defined by the main container material, the container form, and the material of the liner lids or ends. Also type of container or wrapping by form; prefer description by material first, then by form.  [FDA CFSAN 1995]							
+xmls:anyURI	/	FOODON:03480020	food packing medium	The medium in which the food is packed for preservation and handling or the medium surrounding homemade foods, e.g., peaches cooked in sugar syrup. The packing medium may provide a controlled environment for the food. It may also serve to improve palatability and consumer appeal.							
+xmls:anyURI	/	FOODON:03500010	food contact surface	The specific container or coating materials in direct contact with the food. Multiple values can be assigned. [FDA CFSAN 1995]							
+model	/	GENEPIO:0002088	Antibiogram	A dataset of the minimal inhibitory concentrations (value, unit, sign (<,>, =)) and resistance phenotypes (resistant, sensitive or undetermined) of the sequenced isolate against different antibiotics tested.							
+model	/	GENEPIO:0001100	antimicrobial drug tests	This is the minimal set of parameters for drug test results for a particular antimicrobial agent.							
+xmls:anyURI	/GENEPIO:0002088	GENEPIO:0001187	Drug Name	This is a collection of drugs used to test antimicrobial resistance.							
+model	/GENEPIO:0002088	GENEPIO:0002112	MIC Value	This is a component of an antibiogram that enables a choice of MIC measurements based on either the diffusion or dilution method. These methods call for different numeric input ranges and units.							
+xmls:positiveInteger	/GENEPIO:0002088/GENEPIO:0001100/GENEPIO:0002112	GENEPIO:0002110	MIC diffusion measurement	A MIC test measurement resulting from a laboratory diffusion method.	6	99					
+xmls:float	/GENEPIO:0002088/GENEPIO:0001100/GENEPIO:0002112	GENEPIO:0002044	MIC dilution measurement	A MIC test measurement resulting from a laboratory diffusion method.	0.01	2048.0					
+xmls:anyURI	/GENEPIO:0002088	GENEPIO:0002080	MIC Unit	The unit provided for an antibiotic drug test dosage.							
+xmls:anyURI	/GENEPIO:0002088	GENEPIO:0001001	MIC Sign								
+xmls:anyURI	/GENEPIO:0002088	NCIT:C85539	Resistance Phenotype	The outcome of a test to determine whether microbial growth is affected by an antimicrobial compound.							
+xmls:anyURI	/	GENEPIO:0002102	Tissue Specificity (AST Breakpoint)	The tissue type used to select breakpoints from a particular standard, for the interpretation of MIC results.							
+xmls:anyURI	/	NCIT:C85540	Lab Testing Method	A method to determine whether microbial growth is affected by an antimicrobial compound.							
+xmls:decimal	/	GENEPIO:0002101	Minimum Drug Concentration Tested	This is the minimum concentration of a drug applied during an an assay.							
+xmls:decimal	/	GENEPIO:0002100	Maximum Drug Concentration Tested	This is the maximum concentration of a drug applied during an an assay.							
+xmls:anyURI	/	GENEPIO:0002047	Lab Testing Reagent	The commercial kit or product used to determine the MIC e.g. E-Test. If a commercial product was not used, include the type of media used.							
+xmls:anyURI	/	GENEPIO:0002062	Lab Testing Standard	The clinical and laboratory guidelines or standards that prescribe the threshold values for determining resistance phenotypes.							
+xmls:anyURI	/	GENEPIO:0002049	Lab Testing Platform	The instrumentation used to determine minimum inhibitory concentration values.							
+model	/	GENEPIO:0002085	Sequencing								
+xmls:dateTime	/	GENEPIO:0000069	Sequencing Date	date the sequencing run was performed							
+model	/	GENEPIO:0002139	Raw Sequence Data Processing	The procedures used to remove adapters from raw sequence reads, trim low quality bases and where applicable, merge paired-end reads.							
+xmls:string	/GENEPIO:0002085	GENEPIO:0002095	read paired-end merging software	The name and version of the software used to merge paired-end reads before assembly.							
+xmls:string	/GENEPIO:0002085	GENEPIO:0000150	Sequence Data Filtering Method	The name and version of software used in a bioinformatics workflow to improve the quality of sequencing reads.							
+xmls:string	/GENEPIO:0002085	GENEPIO:0002096	read adapter trimming software	The name and version of the software product used for removal of adapter sequences from demultiplexed data reads							
+xmls:boolean	/GENEPIO:0002085	GENEPIO:0000084	read adapter trimming	the removal of adapter sequences from demultiplexed data reads							
+xmls:string	/	OBI:0000079	Culture Media	a processed material that provides the needed nourishment for microorganisms or cells grown in vitro.							
+xmls:string	/	GENEPIO:0002093	DNA  Extraction  Method	The procedure used to obtain genomic DNA from a sample through chemical, physical or mechanical means.							
+xmls:anyURI	/	EFO:0000683	Sequencing Replicates	A role played by a a biological sample in the context of an experiment where the intent is that biological or technical variation is measured.							
+xmls:string	/	GENEPIO:0000085	Sequence Library Preparation Method	Packaged kits (containing adapters, indexes, enzymes, buffers etc), tailored for specific sequencing workflows, which allow the simplified preparation of sequencing-ready libraries for small genomes, amplicons, and plasmids.							
+xmls:string	/	GENEPIO:0000149	Sequencing Library Preparation Kit Version	The version identifier of a packaged kit tailored for specific sequencing workflows.							
+xmls:string	/	GENEPIO:0000075	Sequencing Chemistry	lab method to determine the order of nucleotides in a DNA molecule							
+xmls:anyURI	/	GENEPIO:0001921	Sequencing Instrumentation	A product name and model number of a manufacturer's genomic (dna) sequencer.							
+xmls:anyURI	/	GENEPIO:0000090	Sequence Assembly Method	Assembly method refers to how the reads were assembled into contigs for which either a de novo or mapping (reference based) strategy is used.							
+xmls:string	/	GENEPIO:0000151	bioinformatics pipeline name								
+xmls:string	/	GENEPIO:0000153	bioinformatics pipeline protocol								
+xmls:string	/	GENEPIO:0000152	bioinformatics pipeline version								
+xmls:string	/	GENEPIO:0000095	Sequence Annotation Method	Program used for annotation							
+model	/	GENEPIO:0002090	Sequence Assembly Quality Metrics	Measurements or calculated quantities used to assess the extent and success of the sequence assembly process. Metric thresholds are species-specific.							
+xmls:string	/	GENEPIO:0002137	breadth of coverage	The breadth of coverage is the percentage of the genome that was sequenced to a prescribed depth of coverage.							
+xmls:decimal	/	GENEPIO:0001561	Size of Assembled Genome	The assembly genome size is the sum of all lengths of a sequence assembly's contigs.							
+xmls:decimal	/	GENEPIO:0002138	mean contig length	The mean contig length is the count of base pairs in the average size contig of the sequence assembly.							
+xmls:unsignedShort	/	GENEPIO:0000093	Number of Contigs	A contig count is the count of contigs that belong to a sequence assembly.							
+xmls:unsignedShort	/	GENEPIO:0000092	Sequencing Depth	Coverage (read depth or depth) is the average number of reads representing a given nucleotide in the reconstructed sequence.							
+xmls:decimal	/	OBI:0001941	N50	N50 statistic computed for the contigs produced by the assembly process. A contig N50 is calculated by first ordering every contig by length from longest to shortest. Next, starting from the longest contig, the lengths of each contig are summed, until this running sum equals one-half of the total length of all contigs in the assembly. The contig N50 of the assembly is the length of the shortest contig in this list.							
+model	/	GENEPIO:0002089	Virulence	The virulence factors determined to be present in the sequenced isolate by phenotypic or target amplification methods e.g. Shiga toxins, hemolysins.							
+xmls:string	/	GENEPIO:0002130	virulence factor name	The name of the virulence factor molecule produced by a pathogen that specifically causes disease, or that influences the host's function to allow the pathogen to thrive.							
+xmls:string	/	GENEPIO:0002131	virulence testing protocol name	The laboratory protocol used to determine virulence phenotypes and markers.							
+xmls:string	/	GENEPIO:0002132	detection limit	The detection limit denotes the smallest measure that can be detected with reasonable certainty for a given analytical procedure.							
+model	/	GENEPIO:0002092	Submission to EBI								
+xmls:anyURI	/	GENEPIO:0002135	environmental_feature	identifies sequences derived by direct molecular isolation from a bulk environmental DNA sample (by PCR with or without subsequent cloning of the product, DGGE, or other anonymous methods) with no reliable identification of the source organism. Environmental samples include clinical samples, gut contents, and other sequences from anonymous organisms that may be associated with a particular host. They do not include endosymbionts that can be reliably recovered from a particular host, organisms from a readily identifiable but uncultured field sample (e.g., many cyanobacteria), or phytoplasmas that can be reliably recovered from diseased plants (even though these cannot be grown in axenic culture).							
+xmls:string	/	GENEPIO:0002140	strain OR isolate	Name of strain from which sample was obtained OR name of isolate from which sample was obtained.							
+xmls:anyURI	/	GENEPIO:0001640	taxon OR organism	This is the taxonomic species descriptor of a specimen isolate (an organism found within a specimen.)							
+xmls:string	/	GENEPIO:0001079	serovar	A serotype or serovar is a distinct variation within a species of bacteria or virus or among immune cells of different individuals. These microorganisms, viruses, or cells are classified together based on their cell surface antigens, allowing the epidemiologic classification of organisms to the sub-species level							
+xmls:dateTime	/	OBI:0001619	collection_date	A time measurement datum that is the measure of the time when the specimens are collected.							
+model	/	GENEPIO:0001797	collected_by	The "specimen extraction by" is a datum containing the name of persons or institute who collected a given specimen.							
+xmls:string	/GENEPIO:0002092/GENEPIO:0001797	NCIT:C25191	Person Name	A word or group of words indicating the identity of a person usually consisting of a first (personal) name and a last (family) name with an optional middle name. In some cultural traditions the family name comes first.							
+xmls:string	/GENEPIO:0002092/GENEPIO:0001797	NCIT:C93874	organization name	A textual identifier for an organization. [def-source: NCI]							
+model	/	GENEPIO:0002086	lat_lon OR country	The geographical origin of the sample by city, region, country or latitude and logitude.							
+model	/GENEPIO:0002092	GENEPIO:0001656	latitude and longitude coordinate(s)								
+xmls:decimal	/GENEPIO:0002092/GENEPIO:0002086	GENEPIO:0001863	longitude	A decimal longitude measurement in degrees in conformance with the ISO 6709 standard.	-180.0	180.0					
+xmls:decimal	/GENEPIO:0002092/GENEPIO:0002086	GENEPIO:0001862	latitude	A decimal latitude measurement in degrees in conformance with the ISO 6709 standard.	-90.0	90.0					
+xmls:anyURI	/GENEPIO:0002092	GENEPIO:0000118	country	A specimen location country is the country of the site of a given specimen collection event.							
+xmls:anyURI	/GENEPIO:0002092	GENEPIO:0002097	Province/State/Territory/Region	A specimen extraction location - city or region is the Gazetteer ontology identifier or textual name of the most precise geographical location available for the site of a specimen extraction event.							
+xmls:anyURI	/GENEPIO:0002092	GENEPIO:0001785	city	The specimen extraction location - city is the city where a specimen was taken (extracted) from a subject or environment							
+model	/	GENEPIO:0002076	isolation_source	A geographic location where a given specimen was extracted or collected from. Location can be identified at country, city, postal address, or longitude and latitude level of granularity. It can also be described by biome, physiographic and other environmental features.							
+xmls:anyURI	/GENEPIO:0002092	ENVO:00000191	physiographic feature								
+xmls:anyURI	/GENEPIO:0002092	ENVO:00000002	constructed feature	An anthropogenic geographic feature is a geographic feature resulting from the influence of human beings on nature.							
+xmls:anyURI	/GENEPIO:0002092	ENVO:00000428	biome	A biome is an environmental system to which resident ecological communities have evolved adaptations.							
+xmls:anyURI	/	GENEPIO:0001567	specific_host	The species of the host organism from which a specimen (pathogen) organism was obtained. Use the full taxonomic name, eg, "Homo sapiens".							
+xmls:anyURI	/	GENEPIO:0000110	host_disease_status	A description of whether a given subject organism appeared healthy, sick or deceased at the time of specimen extraction. If sick or deceased, additional details should be provided in project-specific fields.							
+model	/	GENEPIO:0002091	Submission to NCBI/DDBJ								
+xmls:string	/	OBI:0001616	sample_name	A CRID symbol denotes a specimen and used to distinguish one specimen from another in an investigation.							
+xmls:string	/	GENEPIO:0002141	lat_lon	The geographical coordinates of the location where the sample was collected. Specify as degrees latitude and longitude in format "d[d.dddd] N|S d[dd.dddd] W|E", eg, 38.98 N 77.11 W					\s*(\d(.\d{1,4})?|[1-8]\d(.\d{1,4})?|90(.0{1,4})?)\s*[WEwe]\s*(\d(.\d{1,4})?|[1-9]\d(.\d{1,4})?|1[0-7]\d(.\d{1,4})?|180(.0{1,4})?)\s*[NSns]\s*		
+xmls:string	/	GENEPIO:0001644	isolate	An isolate identifier is an identifier assigned to a given isolate by a particular agency that is handling or storing it.							
+xmls:string	/	GENEPIO:0001429	strain	A strain identifier is the unique microbial or eukaryotic strain name from a reference database that a sample has been matched to.							
+xmls:anyURI	/	GENEPIO:0001640	organism	This is the taxonomic species descriptor of a specimen isolate (an organism found within a specimen.)							
+xmls:anyURI	/	GENEPIO:0000113	attribute_package	Specimen category is a categorical variable that broadly indicates the source of a specimen in order for data processing systems like NCBI's biosample submission portal to anticipate other fields related to the source. Currently this distinguishes between "clinical or host associated" specimens and "environmental/food or other pathogen" specimens.							
+xmls:dateTime	/	OBI:0001619	collection_date	A time measurement datum that is the measure of the time when the specimens are collected.							
+model	/	GENEPIO:0001797	collected_by	The "specimen extraction by" is a datum containing the name of persons or institute who collected a given specimen.							
+xmls:string	/GENEPIO:0002091/GENEPIO:0001797	NCIT:C25191	Person Name	A word or group of words indicating the identity of a person usually consisting of a first (personal) name and a last (family) name with an optional middle name. In some cultural traditions the family name comes first.							
+xmls:string	/GENEPIO:0002091/GENEPIO:0001797	NCIT:C93874	organization name	A textual identifier for an organization. [def-source: NCI]							
+model	/	GENEPIO:0001657	geo_loc_name	Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"							
+xmls:anyURI	/GENEPIO:0002091	NCIT:C25464	Country	A collective generic term that refers here to a wide variety of dependencies, areas of special sovereignty, uninhabited islands, and other entities in addition to the traditional countries or independent states.							
+xmls:string	/GENEPIO:0002091/GENEPIO:0001657	GENEPIO:0001887	landmark								
+xmls:anyURI	/GENEPIO:0002091/GENEPIO:0001657	NCIT:C80234	Municipality	A political unit, such as a city, town, or village, incorporated for local self-government.							
+xmls:anyURI	/GENEPIO:0002091	ENVO:00000005	state / province / territory / region	A primary administrative division of a country, such as a state in the United States.							
+xmls:string	/	GENEPIO:0000027	isolation_source	Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.							
+xmls:anyURI	/	GENEPIO:0001567	host	The species of the host organism from which a specimen (pathogen) organism was obtained. Use the full taxonomic name, eg, "Homo sapiens".							
+xmls:string	/	GENEPIO:0001724	host common name	The natural language (non-taxonomic) name of the type of organism (human or animal) that is the subject of a given investigation, study and/or specimen.							
+xmls:anyURI	/	GENEPIO:0001617	host_disease	Name of disease in a subject that is related to a given investigation, study and/or specimen.							
