@@ -9,7 +9,7 @@ The GenEpiO/iso2017 repository offers a choice of formats for downloading the on
 * Sequencing
 * Sequence Assembly Quality Metrics
 
-The plain-text **.tsv** (tabular) format options may be the most accessible for software developers as they have the simplest structure.  Details of the **raw** and **form** formats are below.  
+The plain-text **.tsv** (tabular) format options may be the most accessible for software developers as they have the simplest structure.  
 
 * **iso_form_core_nodes.tsv** : The "core" nodes file contains all field terms in a specification, except for the underlying choices of categorical input fields.  
 * **iso_form_core_edges.tsv** : Relations between a parent specification element and its underlings are specified here.
@@ -42,14 +42,14 @@ Columns in an **edges.tsv** file's table:
 * **minCardinality**: The minimum number of the child type of field or component allowed to exist under parent.
 * **maxCardinality**: The maximum number of the child type of field or component allowed to exist under parent. For example, enables one to specify up to 3 phone numbers.
 
-The **form** Json (and Yaml) format is a hierarchic data structure whose elements represent form sections and fields, in order.  Hierarchic categorical picklists are represented as ordered dictionaries within dictionaries, recursively. This format also includes synonyms.
+The **iso_form.json** (and Yaml) format is a hierarchic data structure whose elements represent form sections and fields, in order.  Hierarchic categorical picklists are represented as ordered dictionaries within dictionaries, recursively. This format also includes synonyms for terms.
 
 * **iso_form.json**
 * **iso_form.yaml**
 
-The **raw** Json (and Yaml) format is in the relatively flat format that is used to drive the "GEEM" form renderer referenced above. Each ontology term, including units, gets a single top-level entry, so this format has the smallest file size. The hierarchy of elements in the specification are constructed from a given term id (in this case GENEPIO:0002083) by looking at that term's components and choices (in case of categorical variable fields).
+The **iso_raw.json** (and Yaml) format is in the relatively flat format that is used to drive the "GEEM" form renderer referenced above. Each ontology term, including units, gets a single top-level entry, so this format has the smallest file size. The hierarchy of elements in the specification are constructed from a given term id (in this case GENEPIO:0002083) by looking at that term's components and choices (in case of categorical variable fields).
 
 * **iso_raw.json**
 * **iso_raw.yaml**
 
-Lastly, the **genepio_merged.owl** file is the GenEpiO ontology file that was used to generate the ISO specifications. This file however contains many other ontology terms besides those included in the specification.
+Lastly, the **genepio_merged.owl** file is the GenEpiO ontology file that was used to generate the ISO specification formats above. This file however contains many other ontology terms besides those included in the specification.
