@@ -52,4 +52,4 @@ The **iso_raw.json** (and Yaml) format is in the relatively flat format that is 
 * **iso_raw.json**
 * **iso_raw.yaml**
 
-Lastly, the **genepio_merged.owl** file is the GenEpiO ontology file that was used to generate the ISO specification formats above. This file however contains many other ontology terms besides those included in the specification.
+Lastly, the **genepio-merged.owl** file is the GenEpiO ontology file that was used to generate the ISO specification formats above. This file however contains many other ontology terms besides those included in the specification.
