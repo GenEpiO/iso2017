@@ -11,14 +11,14 @@ The GenEpiO/iso2017 repository offers a choice of formats for downloading the on
 
 The plain-text **.tsv** (tabular) format options may be the most accessible for software developers as they have the simplest structure.  Details of the **raw** and **form** formats are below.  
 
-* **GEEM core nodes .tsv** : The "core" nodes file contains all field terms in a specification, except for the underlying choices of categorical input fields.  
-* **GEEM core edges .tsv** : Relations between a parent specification element and its underlings are specified here.
-* **GEEM all nodes .tsv** : Includes core nodes, but also has all underlying categorical choices.
-* **GEEM all edges .tsv** : Includes core edges, but also has all relations that define categorical lists and hierarchies. 
+* **iso_form_core_nodes.tsv** : The "core" nodes file contains all field terms in a specification, except for the underlying choices of categorical input fields.  
+* **iso_form_core_edges.tsv** : Relations between a parent specification element and its underlings are specified here.
+* **iso_form_all_nodes.tsv** : Includes core nodes, but also has all underlying categorical choices.
+* **iso_form_all_edges.tsv** : Includes core edges, but also has all relations that define categorical lists and hierarchies. 
 
 Note that a nodes table can list a particular ontology term more than once - for example on a form the same country list may occur for both sample location and sample collection agency location.  The "GEEM all edges .tsv" file will repeat both form fields' choices in full.  Also note that some categorical pick-list fields have a "lookup" user interface feature set. This is set in the GEEM raw specification in the case where a field's selections are too large or unwieldy to include directly in a form (for example, listing all the municipalities in the world as possible sample sites to pick from). The lookup feature indicates that further choices can be fetched from online ontology lookup services like OLS; however implementers may want to include their own cacheable term lookup system for such functionality. Currently this feature is not listed in the core/all nodes tables.
 
-Columns in a **nodes .tsv** table:
+Columns in a **nodes.tsv** file's table:
 
 * **datatype**: One of the XML schema datatypes allowable under OWL, or "model", which indicates a grouping of form fields. The xmls:anyURI datatype indicates that given item is a categorical variable or an underlying choice of one.
 * **path**: Forward slash / delimited list of form parts between top level form and given term or component. This is a full path rather than just a parent identifier to avoid ambiguity in the situation where a form field or component appears in more than one form section.
@@ -34,7 +34,7 @@ Columns in a **nodes .tsv** table:
 * **format**: E.g. "dateFormat:ISO 8601" enables specification of predefined formats.
 * **preferred_unit**: If a field has more than one unit choice, this indicates the preferred unit.
 
-Columns in an **edges .tsv** table:
+Columns in an **edges.tsv** file's table:
 
 * **relation**: Type of relation existing between parent and child, e.g. "component", or "choice"
 * **path**: parent term (or component) identifier, including path to that parent.
@@ -44,10 +44,12 @@ Columns in an **edges .tsv** table:
 
 The **form** Json (and Yaml) format is a hierarchic data structure whose elements represent form sections and fields, in order.  Hierarchic categorical picklists are represented as ordered dictionaries within dictionaries, recursively. This format also includes synonyms.
 
-* **GEEM form.json**
-* **GEEM form.yaml**
+* **iso_form.json**
+* **iso_form.yaml**
 
-The **raw** Json (and Yaml) format is in the relatively flat format that is used to drive the GEEM website itself. Each ontology term, including units, gets a top-level entry, and is mentioned only once, so this format has the smallest file size. The hierarchy of elements in the specification are constructed from a given term id in this case GENEPIO:0002083, by looking at that term's components and choices (in case of categorical variable fields).
+The **raw** Json (and Yaml) format is in the relatively flat format that is used to drive the "GEEM" form renderer referenced above. Each ontology term, including units, gets a single top-level entry, so this format has the smallest file size. The hierarchy of elements in the specification are constructed from a given term id (in this case GENEPIO:0002083) by looking at that term's components and choices (in case of categorical variable fields).
 
-* **GEEM raw.json**
-* **GEEM raw.yaml**
+* **iso_raw.json**
+* **iso_raw.yaml**
+
+Lastly, the **genepio_merged.owl** file is the GenEpiO ontology file that was used to generate the ISO specifications. This file however contains many other ontology terms besides those included in the specification.
