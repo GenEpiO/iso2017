@@ -9,7 +9,7 @@ The GenEpiO/iso2017 repository offers a choice of formats for downloading the on
 * Sequencing
 * Sequence Assembly Quality Metrics
 
-The plain-text **.tsv** (tabular) format options may be the most accessible for software developers as they have the simplest structure and smallest size.  Details of the **raw** and **form** formats are below.  
+The plain-text **.tsv** (tabular) format options may be the most accessible for software developers as they have the simplest structure.  Details of the **raw** and **form** formats are below.  
 
 * **GEEM core nodes .tsv** : The "core" nodes file contains all field terms in a specification, except for the underlying choices of categorical input fields.  
 * **GEEM core edges .tsv** : Relations between a parent specification element and its underlings are specified here.
