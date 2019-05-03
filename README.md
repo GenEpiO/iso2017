@@ -23,8 +23,10 @@ Columns in a **nodes.tsv** file's table:
 * **datatype**: One of the XML schema datatypes allowable under OWL, or "model", which indicates a grouping of form fields. The xmls:anyURI datatype indicates that given item is a categorical variable or an underlying choice of one.
 * **path**: Forward slash / delimited list of form parts between top level form and given term or component. This is a full path rather than just a parent identifier to avoid ambiguity in the situation where a form field or component appears in more than one form section.
 * **id**: Ontology_id of term or component
-* **uiLabel**: User interface label of term
-* **uiDefinition**: User interface definition for term
+* **label**: label of term as source ontology defines it
+* **definition**: definition of term as source ontology defines it
+* **ui_label**: User interface label of term, which can be provided if use of ontology defined label is awkward.
+* **ui_definition**: User interface definition for term, provided when ontology definition is more focused on formal logic description for example.
 * **help**: User interface help about term.
 * **minValue**: For a numeric variable, minimum value constraint
 * **maxValue**: For a numeric variable, maximum value constraint
